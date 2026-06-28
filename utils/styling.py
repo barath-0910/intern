@@ -29,8 +29,8 @@ def load_theme(dark: bool = True):
 
     if dark:
         bg_grad = "linear-gradient(135deg, #0a0e1a 0%, #0f1729 45%, #131b2e 100%)"
-        glass_bg = "rgba(255, 255, 255, 0.045)"
-        glass_border = "rgba(255, 255, 255, 0.09)"
+        glass_bg = "rgba(255, 255, 255, 0.07)"
+        glass_border = "rgba(255, 255, 255, 0.14)"
         text_primary = "#eef2f9"
         text_secondary = "#9aa7bd"
         card_shadow = "0 8px 32px rgba(0, 0, 0, 0.45)"
@@ -114,6 +114,10 @@ def load_theme(dark: bool = True):
         box-shadow: {card_shadow};
         transition: transform 0.25s ease, box-shadow 0.25s ease;
         animation: fadeInUp 0.5s ease;
+        color: {text_primary};
+    }}
+    .glass-card p, .glass-card div, .glass-card span, .glass-card li {{
+        color: {text_primary};
     }}
     .glass-card:hover {{
         transform: translateY(-4px);
@@ -308,6 +312,10 @@ def load_theme(dark: bool = True):
         box-shadow: 0 20px 60px rgba(0,0,0,0.35);
         text-align: center;
         animation: fadeInUp 0.6s ease;
+        color: {text_primary};
+    }}
+    .login-card p, .login-card div, .login-card span {{
+        color: {text_primary};
     }}
 
     /* Animated gradient top bar for header */
@@ -323,6 +331,10 @@ def load_theme(dark: bool = True):
         justify-content: space-between;
         margin-bottom: 1.2rem;
         animation: fadeInUp 0.5s ease;
+        color: {text_primary};
+    }}
+    .top-banner p, .top-banner div, .top-banner span {{
+        color: {text_primary};
     }}
 
     hr {{ border-color: {glass_border}; }}
