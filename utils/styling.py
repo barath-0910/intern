@@ -29,9 +29,9 @@ def load_theme(dark: bool = True):
 
     if dark:
         bg_grad = "linear-gradient(135deg, #0a0e1a 0%, #0f1729 45%, #131b2e 100%)"
-        glass_bg = "rgba(255, 255, 255, 0.07)"
-        glass_border = "rgba(255, 255, 255, 0.14)"
-        text_primary = "#ffffff"
+        glass_bg = "rgba(255, 255, 255, 0.045)"
+        glass_border = "rgba(255, 255, 255, 0.09)"
+        text_primary = "#eef2f9"
         text_secondary = "#9aa7bd"
         card_shadow = "0 8px 32px rgba(0, 0, 0, 0.45)"
         accent = "#3b82f6"
@@ -114,10 +114,6 @@ def load_theme(dark: bool = True):
         box-shadow: {card_shadow};
         transition: transform 0.25s ease, box-shadow 0.25s ease;
         animation: fadeInUp 0.5s ease;
-        color: {text_primary};
-    }}
-    .glass-card p, .glass-card div, .glass-card span, .glass-card li {{
-        color: {text_primary};
     }}
     .glass-card:hover {{
         transform: translateY(-4px);
@@ -209,13 +205,16 @@ def load_theme(dark: bool = True):
     /* Buttons */
     .stButton > button {{
         background: linear-gradient(135deg, var(--accent), var(--accent2));
-        color: white;
+        color: #ffffff !important;
         border: none;
         border-radius: 10px;
         padding: 0.55rem 1.2rem;
         font-weight: 600;
         transition: all 0.2s ease;
         box-shadow: 0 4px 14px rgba(59,130,246,0.3);
+    }}
+    .stButton > button p {{
+        color: #ffffff !important;
     }}
     .stButton > button:hover {{
         transform: translateY(-2px);
@@ -237,7 +236,7 @@ def load_theme(dark: bool = True):
         border: 1px solid {glass_border};
     }}
 
-    /* Tabs */
+    /* Tabs (used in Excel Import Center for switching between datasets) */
     .stTabs [data-baseweb="tab-list"] {{
         gap: 6px;
         background: var(--table-bg);
@@ -247,11 +246,14 @@ def load_theme(dark: bool = True):
     .stTabs [data-baseweb="tab"] {{
         border-radius: 9px;
         font-weight: 600;
-        color: {text_secondary};
+        color: #ffffff !important;
+    }}
+    .stTabs [data-baseweb="tab"] p {{
+        color: #ffffff !important;
     }}
     .stTabs [aria-selected="true"] {{
         background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
-        color: white !important;
+        color: #ffffff !important;
     }}
 
     /* Progress / KYC score bar */
@@ -312,10 +314,6 @@ def load_theme(dark: bool = True):
         box-shadow: 0 20px 60px rgba(0,0,0,0.35);
         text-align: center;
         animation: fadeInUp 0.6s ease;
-        color: {text_primary};
-    }}
-    .login-card p, .login-card div, .login-card span {{
-        color: {text_primary};
     }}
 
     /* Animated gradient top bar for header */
@@ -331,10 +329,6 @@ def load_theme(dark: bool = True):
         justify-content: space-between;
         margin-bottom: 1.2rem;
         animation: fadeInUp 0.5s ease;
-        color: {text_primary};
-    }}
-    .top-banner p, .top-banner div, .top-banner span {{
-        color: {text_primary};
     }}
 
     hr {{ border-color: {glass_border}; }}
